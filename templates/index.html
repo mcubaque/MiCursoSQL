@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de SQL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>Guía de SQL</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <!-- Agrega más enlaces a otras páginas si lo necesitas -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <h2>Descripcion de la guía</h2>
+        <h3>Guía de SQL: Dominando el Lenguaje de Consulta Estructurada</h3>
+            
+            <p>La "Guía de SQL" es una completa y detallada colección de recursos diseñada para aquellos que desean dominar el Lenguaje de Consulta Estructurada (SQL). Desde los fundamentos básicos hasta técnicas avanzadas, esta guía proporciona un enfoque paso a paso para aprender y entender SQL de manera efectiva.</p>
+            
+            <p>Contenido:
+                <ol>            
+                <li>Introducción a SQL: 
+                    <ul>
+                        <li>Fundamentos y Conceptos Básicos</li>
+                        <li>Conoce la historia y el propósito de SQL.</li>
+                        <li>Explora los diferentes dialectos de SQL y su compatibilidad con los sistemas de gestión de bases de datos.</li>
+                        <li>Aprende los conceptos básicos como tablas, columnas, filas y cláusulas.</li></li>
+                </ul>
+               <li>Manipulación de Datos con SQL
+                    <ul>
+                        <li>Dominio de las sentencias SELECT, INSERT, UPDATE y DELETE.</li>
+                        <li>Utilización de cláusulas condicionales, ordenamiento y agrupamiento de datos.</li>
+                        <li>Aplicación de funciones y operadores para realizar cálculos y manipular datos.</li></li>
+                    </ul>
+               <li>Diseño y Administración de Bases de Datos
+                    <ul>
+                        <li>Creación de bases de datos y tablas utilizando la instrucción CREATE TABLE.</li>
+                        <li>Definición de claves primarias, claves foráneas y restricciones de integridad referencial.</li>
+                        <li>Optimización de la estructura de la base de datos para mejorar el rendimiento y la eficiencia.</li></li>
+                    </ul>
+              <li>Consultas Avanzadas y Optimización de Consultas
+                    <ul>
+                        <li>Dominio de consultas complejas utilizando JOINs, subconsultas y expresiones de tabla común (CTE).</li>
+                        <li>Uso de índices y técnicas de optimización para mejorar el rendimiento de las consultas.
+                        - Implementación de procedimientos almacenados, funciones y desencadenadores para automatizar tareas y procesos.</li></li>
+                    </ul>
+              <li>Seguridad y Control de Acceso en SQL
+                    <ul>
+                        <li>Gestión de usuarios, roles y permisos en una base de datos SQL.</li>
+                        <li>Implementación de políticas de seguridad para proteger los datos confidenciales.</li>
+                        <li>Auditoría y registro de actividades para mantener la integridad y la seguridad de la base de datos.</li></li>
+                    </ul>
+               <li>Migración, Copias de Seguridad y Recuperación de Datos
+                    <ul>
+                        <li>Técnicas para migrar datos entre diferentes bases de datos y sistemas de gestión.</li>
+                        <li>Estrategias de copia de seguridad y recuperación para garantizar la disponibilidad y la integridad de los datos.</li>
+                        <li>Pruebas de redundancia y recuperación ante fallos para minimizar el riesgo de pérdida de datos.</li></li>
+                    </ul>
+                </ol>
+            </p>
+            
+            <h3>Para Quién es Esta Guía:</h3>
+            
+            <p>La "Guía de SQL" está diseñada para una amplia audiencia, que incluye desde principiantes absolutos hasta profesionales experimentados en el ámbito de la gestión de bases de datos. Es ideal para:</p>
+
+            <ul>
+                <li>Estudiantes de informática, ingeniería de software y ciencias de la computación que deseen aprender SQL como parte de su formación académica.</li>
+                <li>Profesionales de TI y desarrolladores de software que necesiten mejorar sus habilidades en bases de datos y consultas SQL.</li>
+                <li>Administradores de bases de datos que deseen profundizar su comprensión y dominio de SQL para administrar y optimizar bases de datos de manera efectiva.</li>
+            </ul>
+            <h3>Beneficios y Características Adicionales:</h3>
+            <ul>
+                <li>Recursos didácticos, como ejemplos de código, ejercicios prácticos y proyectos reales, que facilitan el aprendizaje interactivo y práctico.</li>
+                <li>Tutoriales paso a paso y explicaciones detalladas que abordan los desafíos comunes y las mejores prácticas en el desarrollo y la administración de bases de datos.</li>
+                <li>Actualizaciones periódicas y contenido nuevo para mantenerse al día con las últimas tendencias y avances en SQL y tecnologías relacionadas.</li>
+                <li>Comunidad en línea y soporte técnico para ayudar a resolver dudas, compartir experiencias y colaborar con otros estudiantes y profesionales.</li>
+            </ul>
+    </div>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Categorías</h1>
+        <ul class="list-group">
+            <!-- Aquí van las categorías -->
+            {% for categoria in categorias %}
+            <li class="list-group-item"><a href="/temas_categoria/{{ categoria[0] }}">{{ categoria[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Marco Cubaque</p>
+    </footer>
+</body>
+</html>

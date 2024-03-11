@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ nombre_tema }}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+<body>
+    <header>
+        <h1>Guía de SQL</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>{{ nombre_tema }}</h1>
+    <div>
+        {% if markdown_enabled %}
+            {{ descripcion | markdown }}
+        {% else %}
+            {{ descripcion | safe }}
+        {% endif %}
+    </div> 
+    <footer>
+        <p>&copy; 2024 Marco Cubaque</p>
+    </footer>
+</body>
+</html>
