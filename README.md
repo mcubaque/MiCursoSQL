@@ -30,3 +30,4 @@ Esta guía está diseñada para una amplia audiencia, que incluye:
 Para cualquier pregunta, sugerencia o comentario, no dudes en ponerte en contacto con nosotros en [mcubaque@poligran.edu.co](mailto:mcubaque@poligran.edu.co).
 
 ¡Gracias por usar la Guía de SQL!
+  

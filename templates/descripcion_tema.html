@@ -16,13 +16,15 @@
             </ul>
         </nav>
     </header>
-    <h1>{{ nombre_tema }}</h1>
-    <div>
-        {% if markdown_enabled %}
-            {{ descripcion | markdown }}
-        {% else %}
-            {{ descripcion | safe }}
-        {% endif %}
+    <div class="container">
+        <h1>{{ nombre_tema }}</h1>
+        <div>
+            {% if markdown_enabled %}
+                {{ descripcion | markdown }}
+            {% else %}
+                {{ descripcion | safe }}
+            {% endif %}
+        </div>
     </div> 
     <footer>
         <p>&copy; 2024 Marco Cubaque</p>
