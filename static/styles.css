@@ -39,13 +39,27 @@ nav ul li a {
 }
 
 /* Estilos para el pie de página */
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
-    margin-top: 1em;
+    margin-top: auto;
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
+
 
 footer p {
     margin: 0;
